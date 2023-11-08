@@ -1,15 +1,22 @@
-# Library Template using libGDX and Gradle 8.x
+# gdx-graalhelper-shim
+Fills in [gdx-graalhelper](https://github.com/Berstanio/gdx-graalhelper)'s annotations when it isn't available.
 
-Change this to fit your library!
+...That's it, that's all this does. It provides two annotations and doesn't do anything with
+them. This allows projects to compile with those annotations in use even if Graal-related code
+isn't being used or depended upon. The package for the two empty annotations is the same as the
+package used by gdx-graalhelper, but the contents of the annotations are the same in that. So,
+even if this package accidentally overwrites the two duplicate files in gdx-graalhelper, it 
+should still work exactly the same.
 
-You'll want to edit gradle.properties to match your library's name, description, author, license, and so on.
-You probably also want to edit build.gradle to match the projectName and group to what you want to use.
+This has one release currently, 1.2.1, and should release in lockstep with Berstanio's gdx-graalhelper.
 
-You should "Find in Files" and search for any places that use the word "template" in order to find anything
-you will want to replace.
+## Install
 
-This currently uses Gradle 8.x; if you want an earlier version that uses 7.x,
-[here you go](https://github.com/tommyettinger/libgdx-library-template/releases/tag/v7.6)!
-Gradle 8.x seems to be fine for library code, and since approximately the middle of 2023, the tooling seems
-to have finally become capable of handling Gradle 8.x and Android/RoboVM projects. Your Android Gradle Plugin
-version should probably be 8.1.2 at this point; it may be able to go up soon as IDEA gets more support.
+In your core module's dependencies:
+
+```groovy
+implementation 'com.github.tommyettinger:gdx-graalhelper-shim:1.2.1'
+```
+
+## License
+Apache License 2.0. For some reason. I guess because that's what gdx-graalhelper uses.
