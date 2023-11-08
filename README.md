@@ -8,14 +8,15 @@ package used by gdx-graalhelper, but the contents of the annotations are the sam
 even if this package accidentally overwrites the two duplicate files in gdx-graalhelper, it 
 should still work exactly the same.
 
-This has one release currently, 1.2.1, and should release in lockstep with Berstanio's gdx-graalhelper.
+This has ~~one~~ two releases currently, though you only would want 1.12.1, and should release in lockstep with
+Berstanio's gdx-graalhelper.
 
 ## Install
 
 In your core module's dependencies:
 
 ```groovy
-implementation 'com.github.tommyettinger:gdx-graalhelper-shim:1.2.1'
+implementation 'com.github.tommyettinger:gdx-graalhelper-shim:1.12.1'
 ```
 
 ## License
